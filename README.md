@@ -10,3 +10,7 @@ knight_moves([3,3],[0,0]) == [[3,3],[1,2],[0,0]]
 The plan is to build a graph in which each vertex is a square's coordinates, and the edges correspond to the path a knight takes, as in this graph:
 
 https://graphonline.ru/en/?graph=vOrNELJzZecXToKs
+
+Breadth-first traversal will then be used to find the shortest path.
+
+Maybe I'll use normal chess coords instead of what the lesson calls for.
