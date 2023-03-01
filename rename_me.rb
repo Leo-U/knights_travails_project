@@ -66,3 +66,33 @@ def adjList
   "h8" => ["f7", "g6"]
 }
 end
+
+
+def knight_moves(start, finish, queue = [start], dict = {}, adj = adjList, path = [])
+  loop do
+    current = queue.shift
+    adj[current].each do |el|
+      
+      if !dict.include?(el)
+        dict[el] = current
+        queue << el
+      end
+
+      if el == finish
+        path.unshift el
+        until el == start do
+          el = dict[el]
+          path.unshift el
+        end
+        puts "Your knight made it in #{path.count - 1} moves! Path taken:" 
+        path.each {|el| puts el}
+        return
+      end
+
+    end
+    break if current == finish
+  end
+
+end
+
+knight_moves('a1', 'h8')
