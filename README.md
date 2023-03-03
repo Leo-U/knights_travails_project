@@ -1,20 +1,21 @@
 ### knights_travails_project
 
-Completed as Part of The Odin Project curriculum: https://www.theodinproject.com/lessons/ruby-knights-travails
+Completed as Part of The Odin Project curriculum:
+
+https://www.theodinproject.com/lessons/ruby-knights-travails
 
 The purpose of this project is to build a function that outputs the shortest path that a chess knight takes to reach a target square -- that is, it outputs all the squares it stops on along the way.
 
-knight_moves([0,0],[1,2]) == [[0,0],[1,2]]
-knight_moves([0,0],[3,3]) == [[0,0],[1,2],[3,3]]
-knight_moves([3,3],[0,0]) == [[3,3],[1,2],[0,0]]
+knight_moves('a1','b3') => ['a1','b3']
 
+knight_moves('a1','d4') => ['a1','b3','d4']
+
+knight_moves('d4','a1') => ['d4','b3','a1']
 
 The plan is to build a graph in which each vertex is a square's coordinates, and the edges correspond to the path a knight takes, as in this graph:
 
-https://graphonline.ru/en/?graph=vOrNELJzZecXToKs
+https://raw.githubusercontent.com/Leo-U/knights_travails_project/main/graph_visualization.png
 
 Breadth-first traversal will then be used to find the shortest path.
 
-Maybe I'll use normal chess coords instead of what the lesson calls for.
-
-Potentially: as in BST project, have a Node class with eight children, `nil` by default. Then, build the tree in a similar fashion as before.
+I like chess, so I decided to use normal chess notation rather than xy coordinates.
