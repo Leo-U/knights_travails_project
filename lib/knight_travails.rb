@@ -1,16 +1,5 @@
 require_relative 'adjacency_list.rb'
 
-def knight_moves(start, target, queue = [start], dict = {}, adj = adjacency_list, path = [])
-  adj.each do
-    current = queue.shift
-    adj[current].each do |el|
-      enqueue_element(dict, el, queue)
-      add_dict_entry(dict, el, current)
-      return shortest_path(start, el, dict, path) if el == target
-    end
-  end
-end
-
 def shortest_path(start, el, dict, path)
   path.unshift el
   until el == start do
@@ -30,7 +19,16 @@ def add_dict_entry(dict, el, current)
 end
 
 # outputs shortest path a chess knight can take to a target square
-
+def knight_moves(start, target, queue = [start], dict = {}, adj = adjacency_list, path = [])
+  adj.each do
+    current = queue.shift
+    adj[current].each do |el|
+      enqueue_element(dict, el, queue)
+      add_dict_entry(dict, el, current)
+      return shortest_path(start, el, dict, path) if el == target
+    end
+  end
+end
 
 knight_moves('a1', 'h8')
 # => Your knight made it in 6 moves! Path taken:
