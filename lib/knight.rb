@@ -14,8 +14,9 @@ class Knight
       el = dict[el]
       path.unshift el
     end
-    puts "Your horsey made it in #{path.count - 1} moves! Path taken:" 
+    puts "Path taken":
     path.each {|el| puts el; sleep(0.5)}
+    puts "Your horsey made it in #{path.count - 1} moves!" 
   end
   
   def enqueue_element(dict, el, queue)
