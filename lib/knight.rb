@@ -1,4 +1,12 @@
+require_relative 'graph.rb'
+
 class Knight
+
+  def init_graph
+    g = Graph.new
+    g.build_adj_list
+    g.adjacency_list
+  end
 
   def shortest_path(start, el, dict, path)
     path.unshift el
@@ -17,9 +25,9 @@ class Knight
   def add_dict_entry(dict, el, current)
     dict[el] = current unless dict.include?(el)
   end
-  
+
   # outputs shortest path a chess knight can take to a target square
-  def knight_moves(start, target, adj, queue = [start], dict = {}, path = [])
+  def knight_moves(start, target, queue = [start], dict = {}, path = [], adj = init_graph)
     adj.each do
       current = queue.shift
       adj[current].each do |el|
@@ -29,5 +37,5 @@ class Knight
       end
     end
   end
-  
+
 end
