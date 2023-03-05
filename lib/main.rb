@@ -2,9 +2,7 @@ require_relative 'knight.rb'
 
 knight = Knight.new
 
-
-
-end_condition = ''
+end_condition = nil
 
 until end_condition == 'exit' || end_condition == 'n' || end_condition == 'no' do
   puts 'Enter starting square (use chess notation -- a1 or d4, etc)!'
