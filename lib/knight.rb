@@ -14,7 +14,7 @@ class Knight
       el = dict[el]
       path.unshift el
     end
-    puts "Your knight made it in #{path.count - 1} moves! Path taken:" 
+    puts "Your horsey made it in #{path.count - 1} moves! Path taken:" 
     path.each {|el| puts el}
   end
   
