@@ -1,9 +1,10 @@
 require_relative 'graph.rb'
 
 class Knight
-
+  attr_reader :g
+  
   def init_graph
-    g = Graph.new
+    @g = Graph.new
     g.build_adj_list
     g.adjacency_list
   end
@@ -16,7 +17,7 @@ class Knight
     end
     puts "Path taken:"
     path.each {|el| puts el; sleep(0.5)}
-    puts "Your horsey made it in #{path.count - 1} moves!" 
+    puts "yOUr hORseY mAde iT In #{path.count - 1} MoVeS!" 
   end
   
   def enqueue_element(dict, el, queue)
