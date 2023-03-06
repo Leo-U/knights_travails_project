@@ -1,3 +1,4 @@
+# main script
 require_relative 'knight.rb'
 
 knight = Knight.new
