@@ -16,16 +16,20 @@ class Graph
     ]
   end
 
+  def valid_coord?(x, y)
+    x.match?(/[a-h]/) && y.between?('1','8')
+  end
+
   def add_edge(src, dest)
     @adjacency_list[src] ||= []
-    @adjacency_list[src] << dest if dest[0].match?(/[a-h]/) && dest[-1].between?('1','8')
+    @adjacency_list[src] << dest if valid_coord?(dest[0], dest[-1])
   end
 
   def add_adj_entry
     @knight_move_offsets.each do |el|
       x = (@root[0].ord + el[0]).chr
       y = "#{@root[1].to_i + el[1]}"
-      add_edge(@root, x + y) if x.match?(/[a-h]/) && y.between?('1', '8')
+      add_edge(@root, x + y) if valid_coord?(x, y)
     end
   end
 
