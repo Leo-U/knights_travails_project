@@ -1,3 +1,4 @@
+# Generates complete adjacency list of legal moves: {a1 => [b3, c2], a2 => ...}
 class Graph
   attr_reader :adjacency_list, :root
 
