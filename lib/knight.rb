@@ -18,11 +18,14 @@ class Knight
       el = dict[el]
       path.unshift el
     end
-    puts "Path taken:"
-    path.each {|el| puts el; sleep(0.5)}
-    puts "yOUr hORseY mAde iT In #{path.count - 1} MoVeS!" 
   end
   
+  def print_shortest_path (path)
+    puts "Path taken:"
+    path.each {|el| puts el; sleep(0.5)}
+    puts "yOUr hORseY mAde iT In #{path.count - 1} MoVeS!"    
+  end
+
   def enqueue_element(dict, el, queue)
     queue << el unless dict.include?(el)
   end
@@ -38,7 +41,8 @@ class Knight
       adj[current].each do |el|
         enqueue_element(dict, el, queue)
         add_dict_entry(dict, el, current)
-        return shortest_path(start, el, dict, path) if el == target
+        shortest_path(start, el, dict, path) if el == target
+        return print_shortest_path(path) if el == target
       end
     end
   end
