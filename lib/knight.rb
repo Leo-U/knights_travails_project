@@ -1,3 +1,7 @@
+# Initializes graph object, traverses it in level-order, then traces and outputs shortest path:
+  # builds a dictionary to make lookup path from visited nodes to the root node, which is a dictionary of the shortest paths for all visited nodes),
+  # then, when target node is located, its own path is output.
+
 require_relative 'graph.rb'
 
 class Knight
