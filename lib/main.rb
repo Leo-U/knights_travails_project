@@ -12,6 +12,16 @@ chess_notation = []
   end
 end
 
+def colorize(string)
+  colors = ["\e[31m", "\e[32m", "\e[33m", "\e[34m", "\e[35m", "\e[36m"]
+  string.chars.map { |char| "#{colors.sample}#{char}\e[0m" }.join
+end
+
+def randomcase(string)
+  string.chars.map { |char| rand(2) == 0 ? char.upcase : char.downcase }.join
+end
+
+
 until end_condition == 'exit' || end_condition == 'n' || end_condition == 'no' do
   puts 'Enter starting square (use chess notation -- a1 or d4, etc)!'
   start = gets.chomp
@@ -20,6 +30,9 @@ until end_condition == 'exit' || end_condition == 'n' || end_condition == 'no' d
   dest = gets.chomp
   raise "Quit horsin' around!" unless chess_notation.include?(dest)
   knight.knight_moves(start, dest)
+  string = "Your horsey made it in #{knight.path.count - 1} moves!"
+  colorized_string = colorize(randomcase(string))
+  puts colorized_string
   sleep(1.2)
   puts '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

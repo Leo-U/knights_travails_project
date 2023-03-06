@@ -10,6 +10,7 @@
 require_relative 'graph.rb'
 
 class Knight
+  attr_reader :path
   def initialize
     @dict = {}
     @path = []
@@ -35,7 +36,6 @@ class Knight
   def print_shortest_path
     puts "Path taken:"
     @path.each {|el| puts el; sleep(0.5)}
-    puts "yOUr hORseY mAde iT In #{@path.count - 1} MoVeS!"    
   end
 
 # Adds a new element to the queue if it hasn't been visited already.
