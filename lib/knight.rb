@@ -1,8 +1,7 @@
 require_relative 'graph.rb'
 
 class Knight
-  attr_reader :g
-  
+
   def init_graph
     @g = Graph.new
     g.build_adj_list
