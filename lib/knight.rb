@@ -4,8 +4,8 @@ class Knight
 
   def init_graph
     @g = Graph.new
-    g.build_adj_list
-    g.adjacency_list
+    @g.build_adj_list
+    @g.adjacency_list
   end
 
   def shortest_path(start, el, dict, path)
