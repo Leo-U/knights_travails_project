@@ -1,8 +1,6 @@
 # Main script
 require_relative 'knight.rb'
 
-knight = Knight.new
-
 end_condition = nil
 
 chess_notation = []
@@ -23,6 +21,7 @@ end
 
 
 until end_condition == 'exit' || end_condition == 'n' || end_condition == 'no' do
+  knight = Knight.new
   puts 'Enter starting square (use chess notation -- a1 or d4, etc)!'
   start = gets.chomp
   raise "Quit horsin' around!" unless chess_notation.include?(start)
