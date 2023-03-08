@@ -24,12 +24,12 @@ until end_condition == 'exit' || end_condition == 'n' || end_condition == 'no' d
   knight = Knight.new
   puts 'Enter starting square (use chess notation -- a1 or d4, etc)!'
   start = gets.chomp
-  raise "Quit horsin' around!" unless chess_notation.include?(start)
+  raise randomcase("quit horsing around") unless chess_notation.include?(start)
   puts 'Enter target square!'
   dest = gets.chomp
-  raise "Quit horsin' around!" unless chess_notation.include?(dest)
+  raise randomcase("quit horsing around") unless chess_notation.include?(dest)
   knight.knight_moves(start, dest)
-  string = "Your horsey made it in #{knight.path.count - 1} moves!"
+  string = "your horsey made it in #{knight.path.count - 1} moves!"
   colorized_string = colorize(randomcase(string))
   puts colorized_string
   sleep(1.2)
