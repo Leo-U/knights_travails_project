@@ -10,7 +10,6 @@ chess_notation = []
   end
 end
 
-# I didn't write #colorize and #randomcase, I asked chatgpt to write them (after the project was done!). not sure where it got them
 def colorize(string)
   colors = ["\e[31m", "\e[32m", "\e[33m", "\e[34m", "\e[35m", "\e[36m"]
   string.chars.map { |char| "#{colors.sample}#{char}\e[0m" }.join
