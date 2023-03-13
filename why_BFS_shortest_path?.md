@@ -11,6 +11,6 @@ There could be multiple routes to a vertex. If J is the starting point, and N is
 
 <img src="images/simple_2.png" alt="isolated" width="200"/>
 
-And in breadth-first search, N is first reached through the shortest path.
+And in breadth-first search, N is arrived at via the shortest route before the longer path has a chance to be fully explored.
 
 But if depth-first search were attempted, then the entire left path could be traversed first, and then we couldn't just trace back the path to J and get the shortest path as we could in breadth-first traversal.
