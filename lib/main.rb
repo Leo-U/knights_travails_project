@@ -1,8 +1,6 @@
 # Main script
 require_relative 'knight.rb'
 
-end_condition = nil
-
 chess_notation = []
 ('a'..'h').each do |letter|
   (1..8).each do |number|
@@ -19,7 +17,7 @@ def randomcase(string)
   string.chars.map { |char| rand(2) == 0 ? char.upcase : char.downcase }.join
 end
 
-
+end_condition = nil
 until end_condition == 'exit' || end_condition == 'n' || end_condition == 'no' do
   knight = Knight.new
   puts 'Enter starting square (use chess notation -- a1 or d4, etc)!'
