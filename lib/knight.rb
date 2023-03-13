@@ -2,7 +2,7 @@
 #
 # start - the starting square in chess notation (e.g. "a1")
 # target - the target square in chess notation (e.g. "h8")
-# queue - a queue of nodes to be visited
+# queue - a queue of nodes to be visited, used for breadth-first search
 # @dict - a dictionary of nodes visited and their shortest path from the starting square
 # path - the shortest path from start to target (a dictionary lookup)
 # adj - the adjacency list of the graph
