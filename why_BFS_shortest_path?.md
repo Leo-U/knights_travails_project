@@ -7,7 +7,7 @@ In level-order traversal of a graph, the vertices are explored in layers. That i
 <img src="images/simple.png" alt="isolated" width="200"/>
 
 
-There could be multiple routes to a vertex. If J is the starting point, and N is the goal, then the rightmost path is the first to reach N:
+There could be multiple routes to a vertex. If J is the starting point, and N is the goal, then the rightmost path is the shortest route to N:
 
 <img src="images/simple_2.png" alt="isolated" width="200"/>
 
