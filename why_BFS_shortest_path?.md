@@ -2,7 +2,7 @@
 
 BFS can be used to find the shortest path in an unweighted graph, which was achieved in this project. If the graph were weighted, it wouldn't work.
 
-In level-order traversal of a graph, the vertices are explored in layers. That is, vertices are visited in all directions at once:
+In level-order traversal of a graph, the vertices are explored in layers. That is, vertices are visited in "all directions at once", or more accurately put, one level at a time:
 
 <img src="images/simple.png" alt="isolated" width="200"/>
 
