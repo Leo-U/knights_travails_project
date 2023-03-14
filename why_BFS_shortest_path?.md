@@ -1,4 +1,4 @@
-## Why Can Breadth-First Search Find Shortest Path?
+## Why Can Breadth-First Search Find the Shortest Path?
 
 BFS can be used to find the shortest path in an unweighted graph, which was achieved in this project. If the graph were weighted, it wouldn't work.
 
@@ -14,4 +14,4 @@ And in breadth-first search, N is arrived at via the shortest route before the l
 
 But if *depth*-first search were attempted, then the entire left path might be traversed first, and then we couldn't just immediately trace back the path to J and get the shortest path as we could in breadth-first traversal.
 
-So in summary, the reason BFS is used to find the shortest path in an unweighted graph, and DFS isn't, is that only BFS can do the job.
+So in summary, the reason BFS is used to find the shortest path in an unweighted graph and DFS isn't, is that DFS can traverse a longer path to a vertex and find that vertex before a shorter path is attempted, which is undesirable, since the goal of our search algorithm is to trace back the path as soon as the vertex is found.
