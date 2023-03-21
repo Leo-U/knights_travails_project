@@ -1,6 +1,6 @@
 ## Why Can Breadth-First Search Find the Shortest Path?
 
-Breadth-First Search (BFS) can be used to find the shortest path in an unweighted graph -- that is, a graph with equal-length edges. This project successfully implemented such an algorithm. If the graph were weighted, BFS could not accomplish the task.
+Breadth-First Search (BFS) can be used to find the shortest path in an unweighted graph -- that is, a graph with equal-length edges. The BFS shortest path algorithm has been successfully implemented in this project. If the graph were weighted, BFS could not accomplish the task.
 
 In level-order traversal of a graph, the vertices are explored in layers. That is, vertices are visited in "all directions at once", or more accurately put, one level at a time:
 
