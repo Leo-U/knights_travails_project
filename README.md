@@ -1,4 +1,4 @@
-### knights_travails_project
+### Knights Travails Project
 
 Completed as Part of The Odin Project curriculum:
 
