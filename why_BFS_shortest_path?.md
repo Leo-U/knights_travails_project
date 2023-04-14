@@ -14,4 +14,4 @@ And in breadth-first search, `N` is arrived at via the shortest route before the
 
 But if *depth*-first search were attempted, then the entire left path might be traversed first, and then we couldn't just immediately trace back the path to `J` and get the shortest path as we could in breadth-first traversal.
 
-So in summary, BFS is used to find the shortest path in an unweighted graph. DFS, however, might traverse a longer path to a vertex and find that vertex without trying a shorter path first. The goal of our algorithm is to trace back the path as soon as the vertex is found.
+So in summary, BFS is used to find the shortest path in an unweighted graph. DFS, however, might traverse a longer path to a vertex without trying a shorter path first. The goal of our algorithm is to trace back the path as soon as the vertex is found.
