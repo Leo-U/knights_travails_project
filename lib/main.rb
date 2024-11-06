@@ -8,10 +8,10 @@ chess_notation = []
   end
 end
 
-def colorize(string)
-  colors = ["\e[31m", "\e[32m", "\e[33m", "\e[34m", "\e[35m", "\e[36m"]
-  string.chars.map { |char| "#{colors.sample}#{char}\e[0m" }.join
-end
+# def colorize(string)
+#   colors = ["\e[31m", "\e[32m", "\e[33m", "\e[34m", "\e[35m", "\e[36m"]
+#   string.chars.map { |char| "#{colors.sample}#{char}\e[0m" }.join
+# end
 
 def randomcase(string)
   string.chars.map { |char| rand(2) == 0 ? char.upcase : char.downcase }.join
@@ -28,8 +28,10 @@ until end_condition == 'exit' || end_condition == 'n' || end_condition == 'no' d
   raise randomcase("quit horsing around") unless chess_notation.include?(dest)
   knight.knight_moves(start, dest)
   string = "your horsey made it in #{knight.path.count - 1} moves!"
-  colorized_string = colorize(randomcase(string))
-  puts colorized_string
+  # colorized_string = colorize(randomcase(string))
+  # puts colorized_string
+  decolorized_string = randomcase(string)
+  puts decolorized_string
   sleep(1.2)
   puts '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
